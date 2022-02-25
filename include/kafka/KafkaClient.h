@@ -470,7 +470,7 @@ KafkaClient::getProperty(const std::string& name) const
     if (valueSize > valueBuf.size())
     {
         valueBuf.resize(valueSize);
-        [[maybe_unused]] rd_kafka_conf_res_t result = rd_kafka_conf_get(conf, name.c_str(), valueBuf.data(), &valueSize);
+        KAFKA_UNUSED rd_kafka_conf_res_t result = rd_kafka_conf_get(conf, name.c_str(), valueBuf.data(), &valueSize);
         assert(result == RD_KAFKA_CONF_OK);
     }
 

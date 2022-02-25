@@ -27,6 +27,12 @@ template<class T>
 using Optional = boost::optional<T>;
 #endif
 
+#if COMPILER_SUPPORTS_CPP_17
+#define KAFKA_UNUSED [[maybe_unused]]
+#else
+#define KAFKA_UNUSED
+#endif
+
 
 namespace KAFKA_API {
 
