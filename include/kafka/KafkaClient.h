@@ -252,7 +252,7 @@ private:
     static const constexpr char* BOOTSTRAP_SERVERS = "bootstrap.servers";
     static const constexpr char* CLIENT_ID         = "client.id";
     static const constexpr char* LOG_LEVEL         = "log_level";
-    static const constexpr char* DEBUG             = "debug";
+    static const constexpr char* DEBUG_STRING      = "debug";
 
 protected:
     struct Pollable
